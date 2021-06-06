@@ -80,7 +80,7 @@ def main_page():
                 return send_file(path, as_attachment=True)
         else:
             return(render_template('error.html'))
-    return(render_template('major_project.html'))
+    return(render_template('Project.html'))
 global s
 if __name__=="__main__":
   app.run(debug=True)
