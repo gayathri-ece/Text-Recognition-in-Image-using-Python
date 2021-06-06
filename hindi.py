@@ -34,9 +34,6 @@ def main_page():
                 s=""
                 for i in result:
                     s+=i[1]+""
-                file=open("text.txt","a")
-                file.write(s)
-                file.close
                 return(s)
             if 'speech' in f:
                 reader = easyocr.Reader(['hi','en']) # need to run only once to load model into memory
@@ -44,10 +41,7 @@ def main_page():
                 s=""
                 for i in result:
                   s+=i[1]+"  "
-                file=open("text.txt","a")
-                file.write(s)
-                file.close
-                language="en"
+                language="hi"
                 output=gTTS(text=s,lang=language,slow=False)
                 output.save("output1.mp3")
                 os.system("start output1.mp3")
