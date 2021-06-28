@@ -21,7 +21,7 @@ def main_page():
             return jsonify(error = 'Incorrect payload!')    
         f=request.form
         print(f)
-        allow=['.png','.jpg','.tiff']
+        allow=['.png','.jpg','.tiff','.jpeg']
         image = request.files["file"]
         im='./content/input'+str(image.filename[image.filename.find('.'):])
         ext=image.filename[image.filename.find('.'):]
